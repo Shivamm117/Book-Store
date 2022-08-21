@@ -19,9 +19,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
-  User.findById('622e61d650602ac1626fad7a')
+  User.findById('6302842f1d219f59d660fa88')
     .then(user => {
       req.user = user;
+      console.log(user);
       next();
     })
     .catch(err => console.log(err));
@@ -32,7 +33,7 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-mongoose.connect('mongodb+srv://Shivam_117:atthetution@node-course.ufu3x.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Shivam:Shivam@book-store.unvv8kn.mongodb.net/?retryWrites=true&w=majority')
 .then(result => {
   User.findOne().then(user => {
     if(!user){

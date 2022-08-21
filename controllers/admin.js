@@ -1,4 +1,3 @@
-const product = require('../models/product');
 const Product = require('../models/product');
 
 exports.getAddProduct = (req, res, next) => {
@@ -58,7 +57,7 @@ exports.postEditProduct = (req, res, next) => {
   const updatedImageUrl = req.body.imageURL;
   const updatedDesc = req.body.description;
   
-  product.findById(prodId).then( product => {
+  Product.findById(prodId).then( product => {
     product.title = updatedTitle,
     product.price = updatedPrice,
     product.description = updatedDesc,
