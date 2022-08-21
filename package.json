@@ -4,8 +4,8 @@
   "description": "Complete Node.js Guide",
   "main": "app.js",
   "engines": {
-    "node": "12.11.1",
-    "npm": "6.14.18"
+    "node": "16.13.1",
+    "npm": "8.12.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
