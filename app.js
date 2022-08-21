@@ -46,7 +46,7 @@ mongoose.connect('mongodb+srv://Shivam_117:atthetution@node-course.ufu3x.mongodb
       user.save()
     }
   });
-  app.listen(process.env.PORT||3000, (req, res) => {
+  app.listen(process.env.PORT || 3000, (req, res) => {
     console.log("Server Up and running at port 3000");
   });
 }).catch(err =>{
