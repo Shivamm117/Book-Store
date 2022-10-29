@@ -55,18 +55,6 @@ app.use(errorController.get404);
 
 mongoose.connect(MONGODB_URI)
 .then(result => {
-  User.findOne().then(user => {
-    if(!user){
-      const user = new User({
-        name : 'Shivam',
-        email : 'shivam.com',
-        cart : {
-          items : []
-        }
-      })
-      user.save()
-    }
-  });
   app.listen(process.env.PORT || 3000, (req, res) => {
     console.log("Server Up and running at port 3000");
   });
